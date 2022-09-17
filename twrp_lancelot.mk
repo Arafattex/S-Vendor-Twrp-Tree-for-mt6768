@@ -35,7 +35,7 @@ PRODUCT_NAME := twrp_lancelot
 PRODUCT_BRAND := xiaomi
 PRODUCT_MODEL := Redmi 9
 PRODUCT_MANUFACTURER := xiaomi
-PRODUCT_RELEASE_NAME := Redmi Note 9
+PRODUCT_RELEASE_NAME := Redmi 9
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.bootimage.build.date.utc=0 \
