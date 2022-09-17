@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/xiaomi/merlin
+LOCAL_PATH := device/xiaomi/lancelot
 
 # Fastbootd
 PRODUCT_PACKAGES += \
