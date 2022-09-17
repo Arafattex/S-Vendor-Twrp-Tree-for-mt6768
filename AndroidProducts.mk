@@ -17,8 +17,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_merlin.mk
+    $(LOCAL_DIR)/twrp_lancelot.mk
 
 COMMON_LUNCH_CHOICES := \
-	twrp_merlin-userdebug \
-	twrp_merlin-eng
+	twrp_lancelot-userdebug \
+	twrp_lancelot-eng

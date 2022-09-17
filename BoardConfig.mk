@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/merlin
+DEVICE_PATH := device/xiaomi/lancelot
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -27,7 +27,7 @@ TARGET_ARCH_VARIANT := armv8-2a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
-TARGET_CPU_VARIANT_RUNTIME := cortex-a75
+TARGET_CPU_VARIANT_RUNTIME :=cortex-a75
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-2a
@@ -38,7 +38,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 TARGET_USES_64_BIT_BINDER := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := merlin
+TARGET_OTA_ASSERT_DEVICE := lancelot
 
 # AVB
 BOARD_AVB_ENABLE := true
