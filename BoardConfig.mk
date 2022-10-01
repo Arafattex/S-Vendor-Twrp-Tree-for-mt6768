@@ -80,6 +80,10 @@ BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 # Platform
 TARGET_BOARD_PLATFORM := mt6768
 
+BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
+    --prop com.android.build.boot.os_version:$(PLATFORM_VERSION) \
+    --prop com.android.build.boot.security_patch:$(PLATFORM_SECURITY_PATCH)
+
 Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := lancelot
 TARGET_NO_BOOTLOADER := true
