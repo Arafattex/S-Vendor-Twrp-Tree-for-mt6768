@@ -117,6 +117,7 @@ TW_USE_FSCRYPT_POLICY := 1
 Use fscrypt policy v1
 
 # TWRP Configuration
+config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
 RECOVERY_SDCARD_ON_DATA := true
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
