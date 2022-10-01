@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_lancelot.mk
+    $(LOCAL_DIR)/twrp_lancelot.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_lancelot-user \
-    omni_lancelot-userdebug \
-    omni_lancelot-eng
+    twrp_lancelot-user \
+    twrp_lancelot-userdebug \
+    twrp_lancelot-eng
