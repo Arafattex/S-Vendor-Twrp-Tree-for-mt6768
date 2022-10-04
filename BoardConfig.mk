@@ -38,7 +38,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 TARGET_USES_64_BIT_BINDER := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := merlin
+TARGET_OTA_ASSERT_DEVICE := merlin,merlin_eea,merlinnfc
 
 # AVB
 BOARD_AVB_ENABLE := true
