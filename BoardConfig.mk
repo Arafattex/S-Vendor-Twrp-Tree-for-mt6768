@@ -38,7 +38,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 TARGET_USES_64_BIT_BINDER := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := lancelot lava
+TARGET_OTA_ASSERT_DEVICE := lancelot,lava,shiva
 
 # AVB
 BOARD_AVB_ENABLE := true
