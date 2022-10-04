@@ -1,3 +1,5 @@
+on early-init
+    write /sys/module/musb_hdrc/parameters/kernel_init_done 1
 
 on property:hwservicemanager.ready=true
     setprop sys.usb.config adb
@@ -9,6 +11,7 @@ on property:ro.boot.usbcontroller=*
     setprop sys.usb.controller ${ro.boot.usbcontroller}
 
 on init
+    mkdir /sideload
     mkdir /config
     mount configfs none /config
     mkdir /config/usb_gadget/g1 0770 shell shell
@@ -101,10 +104,11 @@ on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mtp,adb
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-
-on property:sys.usb.config=sideload
+# Fix device not showing up with "adb devices" in sideload mode
+on property:sys.usb.config=sideload 
     stop adbd
     stop fastbootd
+    setprop sys.usb.configfs 2
 
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=sideload
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "adb"
@@ -119,10 +123,11 @@ on property:sys.usb.ffs.ready=1 && property:sys.usb.config=sideload
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-
+# Fix device not showing up with "adb devices" in fastboot mode
 on property:sys.usb.config=fastboot
     stop adbd
     start fastbootd
+    setprop sys.usb.configfs 2
 
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=fastboot
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "fastboot"
