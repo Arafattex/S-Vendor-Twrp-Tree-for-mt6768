@@ -144,3 +144,34 @@ SELINUX_IGNORE_NEVERALLOWS := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
+
+#SHRP Specific Stuff
+
+SHRP_PATH := device/xiaomi/merlin
+SHRP_MAINTAINER := @shas45558
+SHRP_DEVICE_CODE := merlin
+SHRP_REC_TYPE := Treble
+SHRP_DEVICE_TYPE := A_only
+SHRP_NOTCH := true
+SHRP_EDL_MODE := 0
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb_otg
+SHRP_FLASH := 1
+SHRP_CUSTOM_FLASHLIGHT := true
+SHRP_FONP_1 := /sys/class/leds/flashlight/brightness
+SHRP_FLASH_MAX_BRIGHTNESS := 200
+SHRP_STATUSBAR_RIGHT_PADDING := 40
+SHRP_STATUSBAR_LEFT_PADDING := 40
+SHRP_REC := /dev/block/by-name/recovery
+SHRP_EXCLUDE_MAGISK_FLASH := true
+SHRP_DARK := true
+SHRP_LITE := true
+#SHRP_NOTCH := true
+#SHRP_EXPRESS := true
+#SHRP_EXPRESS_USE_DATA := true
+#SHRP_OFFICIAL := true
+SHRP_SKIP_DEFAULT_ADDON_1 := true
+SHRP_SKIP_DEFAULT_ADDON_2 := true
+SHRP_SKIP_DEFAULT_ADDON_3 := true
+SHRP_SKIP_DEFAULT_ADDON_4 := true
