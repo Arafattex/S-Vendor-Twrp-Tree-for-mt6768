@@ -22,3 +22,21 @@ LOCAL_PATH := device/xiaomi/lancelot
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     android.hardware.fastboot@1.0-impl-mock.recovery
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+	android.hardware.gatekeeper@1.0-service \
+	android.hardware.gatekeeper@1.0-impl
+
+PRODUCT_COPY_FILES += \
+	$(OUT_DIR)/target/product/garden/vendor/bin/hw/android.hardware.gatekeeper@1.0-service:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/android.hardware.gatekeeper@1.0-service \
+	$(OUT_DIR)/target/product/garden/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
+
+# Additional Libraries
+TARGET_RECOVERY_DEVICE_MODULES += \
+	libkeymaster4 \
+	libpuresoftkeymasterdevice
+
+RECOVERY_LIBRARY_SOURCE_FILES += \
+	$(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
+	$(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice
