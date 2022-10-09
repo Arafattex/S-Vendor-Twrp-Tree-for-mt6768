@@ -63,5 +63,3 @@ on property:twrp.decrypt.done=true
     stop servicemanager
     stop hwservicemanager
 
-on boot
-    start unified-script
